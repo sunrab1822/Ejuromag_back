@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "categoryName":"Laptop"
+    },
+    {
+        "id":2,
+        "categoryName":"Tablet"
+    },
+    {
+        "id":3,
+        "categoryName":"Irodai Számítógép"
+    },
+    {
+        "id":4,
+        "categoryName":"Gamer PC"
+    },
+    {
+        "id":5,
+        "categoryName":"Telefon"
+    }
+]

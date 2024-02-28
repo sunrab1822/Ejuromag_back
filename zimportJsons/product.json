@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "category":1,
+        "manufacturer_id":1,
+        "name":"Lenovo Thinkpad 4",
+        "description": "lorem 123",
+        "price": 332332
+    },
+    {
+        "id": 2,
+        "category":5,
+        "manufacturer_id":3,
+        "name":"galaxi h47b2",
+        "description": "lorem 123",
+        "price": 40000
+    },
+    {
+        "id": 3,
+        "category":3,
+        "manufacturer_id":2,
+        "name":"Lenovo desktop 2",
+        "description": "lorem 123",
+        "price": 123000
+    },
+    {
+        "id": 4,
+        "category":1,
+        "manufacturer_id":4,
+        "name":"asus reaper 4",
+        "description": "lorem 123",
+        "price": 500000
+    },
+    {
+        "id": 5,
+        "category":2,
+        "manufacturer_id":5,
+        "name":"samsun 6c ",
+        "description": "lorem 123",
+        "price": 32332
+    }
+]
