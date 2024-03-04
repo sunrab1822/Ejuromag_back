@@ -26,7 +26,7 @@ class getProducts extends Command
      */
     public function handle()
     {
-        $data = json_decode(file_get_contents("zimportJsons/product.json"),true);
+        $data = json_decode(file_get_contents("backupData/product.json"),true);
         foreach ($data as $product){
             print_r($product);
             Product::updateOrCreate(
