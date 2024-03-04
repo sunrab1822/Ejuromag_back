@@ -27,7 +27,7 @@ class getManufacturers extends Command
      */
     public function handle()
     {
-        $data = json_decode(file_get_contents("zimportJsons/manufacturer.json"), true);
+        $data = json_decode(file_get_contents("backupData/manufacturer.json"), true);
 
         foreach ( $data as $manuf){
             print_r($manuf);

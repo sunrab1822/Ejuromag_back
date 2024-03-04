@@ -27,7 +27,7 @@ class getCategories extends Command
      */
     public function handle()
     {
-        $data = json_decode(file_get_contents("zimportJsons/category.json"), true);
+        $data = json_decode(file_get_contents("backupData/category.json"), true);
 
         foreach ($data as $category) {
             Category::updateOrCreate(
