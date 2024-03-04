@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
+use App\Http\Requests\ResetPasswordRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Mail\ResetTokenEmail;
 use App\Models\PasswordResetToken;
@@ -26,7 +27,7 @@ class AuthController extends Controller
 
         if (!Auth::attempt($request->only('email', 'password')))
         {
-            return response()->json(["message" => "Invalid credentials"], 401);
+            return response()->json(["error" => true, "message" => "Invalid credentials"], 401);
         }
 
         $user = User::where('email', $request->email)->first();
@@ -36,7 +37,7 @@ class AuthController extends Controller
             'token' => $user->createToken('API token')->plainTextToken,
         ];
 
-        return response()->json($data);
+        return response()->json(["error" => false, "user" => $data]);
     }
 
     public function Register(StoreUserRequest $request){
@@ -53,12 +54,12 @@ class AuthController extends Controller
             'token' => $user->createToken('API token')->plainTextToken,
         ];
 
-        return response()->json($data, 201);
+        return response()->json(["error" => false, "user" => $data], 201);
     }
 
     public function Logout(){
         Auth::user()->currentAccessToken()->delete();
-        return response()->json(["message" => "Logged out"], 200);
+        return response()->json(["error" => false, "message" => "Logged out"], 200);
     }
 
     public function ResetPasswordToken(Request $request) {
@@ -66,17 +67,17 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
 
         if (!$user){
-            return response()->json(['message' => 'User not found.'], 404);
+            return response()->json(["error" => true, 'message' => 'User not found.'], 404);
         }
 
         $tokenholder = PasswordResetToken::where('email', $user->email)->first();
 
         if ($tokenholder){
-            $expired = Date("Y-m-d H:i", strtotime("15 minutes", strtotime($tokenholder->created_at)));
+            $expired = Date("Y-m-d H:i", strtotime("15 minutes", strtotime($tokenholder->created_at))); /// 15 perces reset token !!!
             $time = Date("Y-m-d H:i", strtotime("60 minutes", strtotime(now())));
 
             if ($time < $expired){
-                return response()->json(["message" => "Email already sent."], 404);
+                return response()->json(["error" => true, "message" => "Email already sent."], 404);
             }
             PasswordResetToken::where('email', $user->email)->delete();
         }
@@ -91,16 +92,16 @@ class AuthController extends Controller
 
         Mail::to($user->email)->send(new ResetTokenEmail($text, $resetLink));
 
-        return response()->json(["message" => "Reset token sent."], 200);
+        return response()->json(["error" => false, "message" => "Reset token sent."], 200);
 
     }
 
-    public function ResetPassword(Request $request) {
+    public function ResetPassword(ResetPasswordRequest $request) {
 
         $tokenholder = PasswordResetToken::where('token',$request->token)->first();
 
         if (!$tokenholder){
-            return response()->json(["message" =>"Token not found"], 404);
+            return response()->json(["error" => true, "message" =>"Token not found"], 404);
         }
 
         $user = User::where('email', $tokenholder->email)->first();
@@ -110,7 +111,7 @@ class AuthController extends Controller
 
         PasswordResetToken::where('email', $user->email)->delete();
 
-        return response()->json(['message' => 'password changed'], 200);
+        return response()->json(["error" => false,'message' => 'password changed'], 200);
 
 
     }

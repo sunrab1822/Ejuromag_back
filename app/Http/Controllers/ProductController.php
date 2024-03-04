@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function getAll($id)
     {
         $categorywithproducts = Category::with('product')->where('id', $id)->get();
-        return response()->json($categorywithproducts);
+        return response()->json(["error" => false, "data" => $categorywithproducts]);
     }
 
 
