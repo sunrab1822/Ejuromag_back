@@ -15,13 +15,13 @@ class ProductController extends Controller
         return response()->json(["error" => false, "data" => $categorywithproducts]);
     }
 
-    public funtion getProduct($id){
+    public function getProduct($id){
         $product = where(Product::where('id', $id)->get());
         if (!$product) {
             return response()->json(["error" => true, "message" => "A termék nem található"]);
         }
 
-        return  return response()->json(["error" => false, "data" => $product]);
+        return response()->json(["error" => false, "data" => $product]);
 
     }
 
