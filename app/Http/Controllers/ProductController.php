@@ -16,7 +16,7 @@ class ProductController extends Controller
     }
 
     public function getProduct($id){
-        $product = where(Product::where('id', $id)->get());
+        $product = Product::where('id', $id)->get();
         if (!$product) {
             return response()->json(["error" => true, "message" => "A termék nem található"]);
         }
