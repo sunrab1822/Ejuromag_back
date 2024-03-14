@@ -22,5 +22,37 @@
     {
         "id":6,
         "name":"ASUS"
+    },
+    {
+        "id":7,
+        "name":"Nintendo"
+    },
+    {
+        "id":8,
+        "name":"Xbox"
+    },
+    {
+        "id":9,
+        "name":"Playstation"
+    },
+    {
+        "id":10,
+        "name":"Acer"
+    },
+    {
+        "id":11,
+        "name":"Honor"
+    },
+    {
+        "id":12,
+        "name":"AMD"
+    },
+    {
+        "id":13,
+        "name":"Intel"
+    },
+    {
+        "id":14,
+        "name":"Huawei"
     }
 ]

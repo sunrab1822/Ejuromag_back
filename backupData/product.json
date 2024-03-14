@@ -1,42 +1,362 @@
 [
     {
         "id": 1,
-        "category":1,
-        "manufacturer_id":1,
-        "name":"Lenovo Thinkpad 4",
-        "description": "lorem 123",
-        "price": 332332
+        "category": 1,
+        "manufacturer_id": 10,
+        "name": "Acer Aspire 3",
+        "description": "Core i5, 512 GB NVMe SSD, 8192 (DDR4) MB, Intel Iris Xe",
+        "price": 164900
     },
     {
         "id": 2,
-        "category":5,
-        "manufacturer_id":3,
-        "name":"galaxi h47b2",
-        "description": "lorem 123",
-        "price": 40000
+        "category": 1,
+        "manufacturer_id": 2,
+        "name": "Lenovo IdeaPad 5 82SG005YHV Grey NOS",
+        "description": "AMD Ryzen 5, 256 NVMe SSD GB, 8192 (DDR4) MB, AMD Radeon",
+        "price": 149900
     },
     {
         "id": 3,
-        "category":3,
-        "manufacturer_id":2,
-        "name":"Lenovo desktop 2",
-        "description": "lorem 123",
-        "price": 123000
+        "category": 1,
+        "manufacturer_id": 2,
+        "name": "Lenovo IdeaPad 5 82FG00MQHV Grey NOS",
+        "description": "Core i3, 256 NVMe SSD GB, 8192 (DDR4) MB, 2048 MB NVIDIA GF MX450",
+        "price": 139900
     },
     {
         "id": 4,
-        "category":1,
-        "manufacturer_id":4,
-        "name":"asus reaper 4",
-        "description": "lorem 123",
-        "price": 500000
+        "category": 1,
+        "manufacturer_id": 2,
+        "name": "Lenovo IdeaPad 3 82RK01FLHV Silver NOS",
+        "description": "Core i5, 1TB NVMe SSD GB, 16384 (DDR4) MB, Intel Iris Xe",
+        "price": 209900
     },
     {
         "id": 5,
+        "category": 1,
+        "manufacturer_id": 3,
+        "name": "Dell Inspiron 3511-I5A918LE. Grey NOS Laptop",
+        "description": "Core i5, 512 GB NVMe SSD, 16384 (DDR4) MB, Intel Iris Xe",
+        "price": 199900
+    },
+    {
+        "id": 6,
+        "category": 1,
+        "manufacturer_id": 2,
+        "name": "Lenovo IdeaPad 3 82RK01FLHV Silver - Win11",
+        "description": "Core i5, 1TB NVMe SSD GB, 16384 (DDR4) MB, Intel Iris Xe, Windows 11 Home 64Bit",
+        "price": 259900
+    },
+    {
+        "id": 7,
+        "category": 1,
+        "manufacturer_id": 3,
+        "name": "HP 250 G10 8A5D5EA Silver - 1TB NVME UPG - Win11",
+        "description": "Core i5, 1TB NVMe SSD GB, 16384 (DDR4) MB, Intel Iris Xe, Windows 11 Home 64Bit",
+        "price": 299900
+    },
+    {
+        "id": 8,
+        "category": 1,
+        "manufacturer_id": 4,
+        "name": "Dell Inspiron 5625-R5A920WE Silver W11 Laptop",
+        "description": "AMD Ryzen 5, 512 GB NVMe SSD, 8192 (DDR4) MB, AMD Radeon, Windows 11 Home 64Bit",
+        "price": 349900
+    },
+    {
+        "id": 9,
+        "category": 1,
+        "manufacturer_id": 6,
+        "name": "Asus ExpertBook P1512CEA-EJ0218 Grey NOS Laptop",
+        "description": "Core i3, 256 NVMe SSD GB, 8192 (DDR4) MB, Intel UHD",
+        "price": 349900
+    },
+    {
+        "id":10,
         "category":2,
+        "manufacturer_id": 5,
+        "name": "Xiaomi Redmi Pad SE",
+        "description": "zöld, belső tárhely: 128GB, felbontás: 1200 x 1920 pixel, processzor: Octa-core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver), RAM: 4GB, ROM: 128GB",
+        "price": 66990
+    },
+    {
+        "id":11,
+        "category":2,
+        "manufacturer_id": 11,
+        "name": "Honor Pad X9",
+        "description": "szürke, belső tárhely: 128GB, felbontás: 2000x1200 pixel, processzor: Octa-core (4x2.8 GHz Cortex-A73 & 4x1.9 GHz Cortex-A53), RAM: 4GB, ROM: 128GB",
+        "price": 71490
+    },
+    {
+        "id":12,
+        "category":2,
+        "manufacturer_id": 1,
+        "name": "Samsung Galaxy Tab A8",
+        "description": "ezüst, belső tárhely: 64GB, felbontás: 1200 x 1920 pixel, processzor: Octa-core (2x2.0 GHz Cortex-A75 & 6x2.0 GHz Cortex-A55), RAM: 4GB, ROM: 64GB",
+        "price": 76090
+    },
+    {
+        "id":13,
+        "category":2,
+        "manufacturer_id": 5,
+        "name": "Xiaomi Redmi Pad",
+        "description": "ezüst, belső tárhely: 64GB, felbontás:1920 x 1080 pixel, processzor: Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55), RAM: 3GB, ROM: 64GB",
+        "price": 72290
+    },
+    {
+        "id":14,
+        "category":2,
+        "manufacturer_id": 5,
+        "name": "Xiaomi Redmi Pad",
+        "description": "zöld, belső tárhely: 64GB, felbontás:1920 x 1080 pixel, processzor: Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55), RAM: 3GB, ROM: 64GB",
+        "price": 72290
+    },
+    {
+        "id":15,
+        "category":2,
+        "manufacturer_id": 1,
+        "name": "Samsung Galaxy Tab A8 4G Lite",
+        "description": "szürke, belső tárhely: 32GB, felbontás:1200 x 1920 pixel, processzor: Octa-core (2x2.0 GHz Cortex-A75 & 6x2.0 GHz Cortex-A55), RAM: 3GB, ROM: 32GB",
+        "price": 77490
+    },
+    {
+        "id":16,
+        "category":2,
+        "manufacturer_id": 2,
+        "name": "Lenovo Tab M11",
+        "description": "zöld, belső tárhely: 64GB, felbontás:1200 x 1920 pixel, processzor: MediaTek Helio G88, RAM: 4GB, ROM: 64GB",
+        "price": 69200
+    },
+    {
+        "id":17,
+        "category":3,
+        "manufacturer_id": 12,
+        "name": "AMD Athlon X4 760K",
+        "description": "processzor: AMD Athlon X4 760K (4 x 3.8GHz / 4.1GHz Turbo, 4MB Cache, 4C/4T), 8GB DDR3 RAM, 128GB SATA SSD, nVidia GT 210 1GB DDR3, Windows 10 Pro",
+        "price": 99990
+    },
+    {
+        "id":18,
+        "category":3,
+        "manufacturer_id": 6,
+        "name": "ASUS PN41 PC",
+        "description": "processzor: Intel Celeron N5100 processzor 1,1 GHz (4M gyorsítótár, 2,8 GHz-ig), 512GB SSD, memória: 8GB, Optikai meghajtó: nem",
+        "price": 78732
+    },
+    {
+        "id":19,
+        "category":3,
+        "manufacturer_id": 6,
+        "name": "ASUS VIVOMINI PC PN50",
+        "description": "processzor: AMD RYZEN 5 4500U, 512GB SSD, memória: 8GB, WIN10 PRO",
+        "price": 189990
+    },
+    {
+        "id":20,
+        "category":3,
+        "manufacturer_id": 6,
+        "name": "ASUS PN41 PC",
+        "description": "processzor: Intel Celeron N5100 processzor 1,1 GHz (4M gyorsítótár, 2,8 GHz-ig), 256GB SSD, memória: 8GB, Microsoft Windows 11 PRO 64bit",
+        "price": 109990
+    },
+    {
+        "id":21,
+        "category":4,
+        "manufacturer_id": 12,
+        "name": "Foramax AMD Ryzen Game PC Gen5",
+        "description": "AMD Ryzen5 5600G (4, 4Ghz), 16GB DDR4, 1TB SSD, AMD Radeon™ Graphics, Kolink Inspire K2 PLUS ARGB + 500w 80PLUS",
+        "price": 139900
+    },
+    {
+        "id":22,
+        "category":4,
+        "manufacturer_id": 13,
+        "name": "Foramax INTEL GAME PC Gen11",
+        "description": "Intel i5 11400F (4, 4Ghz), 16GB DDR4, 500GB SSD, NVIDIA GTX1650 4GB DDR6, Sharkoon RGB - Slider Bk. + 500w 80PLUS",
+        "price": 214900
+    },
+    {
+        "id":23,
+        "category":4,
+        "manufacturer_id": 12,
+        "name": "Foramax AMD Ryzen Game PC Gen5 V2",
+        "description": "AMD Ryzen5 5500 (4, 4Ghz), 16GB DDR4, 1TB SSD, NVIDIA RTX3050 8GB, Deepcool MATREXX 40 3FS + 500w 80PLUS",
+        "price": 244900
+    },
+    {
+        "id":24,
+        "category":4,
+        "manufacturer_id": 12,
+        "name": "Foramax AMD Ryzen Game PC Gen8",
+        "description": "AMD Ryzen5 8600G (5Ghz), 32GB DDR5, 1TB SSD, AMD Radeon™ 760M, Jonsbo D31 Mesh + 550w 80PLUS",
+        "price": 259900
+    },
+    {
+        "id":25,
+        "category":5,
         "manufacturer_id":5,
-        "name":"samsun 6c ",
-        "description": "lorem 123",
-        "price": 32332
+        "name":"Xiaomi Redmi Note 12S",
+        "description":"256GB, 8GB RAM, Dual Sim, MIUI 14 / Android 13",
+        "price": 75999
+    },
+    {
+        "id":26,
+        "category":5,
+        "manufacturer_id":5,
+        "name":"Xiaomi Redmi Note 12 Pro+ 5G",
+        "description":"256GB, 8GB RAM, Dual Sim, Android 13",
+        "price": 129999
+    },
+    {
+        "id":27,
+        "category":5,
+        "manufacturer_id":14,
+        "name":"Huawei Honor 90 Lite 5G",
+        "description":"256GB, 8GB RAM, Dual Sim, Android 13 / Magic UI 7.1",
+        "price": 77999
+    },
+    {
+        "id":28,
+        "category":5,
+        "manufacturer_id":1,
+        "name":"Samsung Galaxy A54 5G",
+        "description":"128GB, 8GB RAM, Dual Sim, Android",
+        "price": 139999
+    },
+    {
+        "id":29,
+        "category":5,
+        "manufacturer_id":11,
+        "name":"Honor 90 Lite 5G",
+        "description":"256GB, 8GB RAM, Dual Sim, Android",
+        "price": 77999
+    },
+    {
+        "id":30,
+        "category":5,
+        "manufacturer_id":1,
+        "name":"Samsung Galaxy S23 5G",
+        "description":"128GB, 8 GB RAM, Android 13 / One UI 5.1",
+        "price": 264999
+    },
+    {
+        "id":31,
+        "category":5,
+        "manufacturer_id":1,
+        "name":"Samsung Galaxy A54 5G",
+        "description":"128GB, 8GB RAM, Dual Sim, Android",
+        "price": 136999
+    },
+    {
+        "id":32,
+        "category":6,
+        "manufacturer_id":9,
+        "name": "PlayStation Classic",
+        "description": "Sony PlayStation Classic konzol, 20 előtelepített játék, Két vezetékes kontroller, Virtuális memória kártya, HDMI kábel",
+        "price": 19999
+    },
+    {
+        "id":33,
+        "category":6,
+        "manufacturer_id":7,
+        "name": "Nintendo Switch Piros-Kék (Új)",
+        "description": "Új típusú Nintendo Switch játékkonzol (4.5-9 óra üzemidő), 1 pár Joy-Con kontroller piros-kék színben, 2 db Joy-Con csuklópánt, Joy-Con markolat, Nintendo Switch dokkoló, HDMI kábel, Hálózati töltő",
+        "price": 124990
+    },
+    {
+        "id":34,
+        "category":6,
+        "manufacturer_id":7,
+        "name": "Nintendo Switch (OLED-Model) Piros-Kék",
+        "description": "Nintendo Switch (OLED-Model) játékkonzol, 1 pár Joy-Con kontroller piros-kék színben, 2 db Joy-Con csuklópánt, Joy-Con markolat, Nintendo Switch dokkoló, HDMI kábel, Hálózati töltő",
+        "price": 144990
+    },
+    {
+        "id":35,
+        "category":6,
+        "manufacturer_id":7,
+        "name": "Nintendo Switch Lite (Korall)",
+        "description": "Nintendo Switch Lite játékkonzol, AC adapter",
+        "price": 94990
+    },
+    {
+        "id":36,
+        "category":6,
+        "manufacturer_id":7,
+        "name": "New Nintendo 3DS XL (Metallic Blue)",
+        "description": "New Nintendo 3DS XL alapgép (Metál kék), New Nintendo 3DS XL stylus, 4 GB-os memóriakártya (microSD), AR kártyák",
+        "price": 64999
+    },
+    {
+        "id":37,
+        "category":6,
+        "manufacturer_id":7,
+        "name": "New Nintendo 2DS XL",
+        "description": "New Nintendo 2DS XL (Fekete-Türkiz)",
+        "price": 49999
+    },
+    {
+        "id":38,
+        "category":6,
+        "manufacturer_id":7,
+        "name": "New Nintendo 3DS (Black)",
+        "description": "New Nintendo 3DS alapgép (Fekete), New Nintendo 3DS stylus, 4 GB-os memóriakártya (microSD), AR kártyák",
+        "price": 55999
+    },
+    {
+        "id":39,
+        "category":6,
+        "manufacturer_id":8,
+        "name": "Xbox Series X 1TB",
+        "description": "Xbox Series X játékkonzol 1TB SSD tárhellyel, 1 db új Xbox Series kontroller fekete színben, Ultra High Speed HDMI-kábel, Tápkábel, Használati útmutató",
+        "price": 189990
+    },
+    {
+        "id":40,
+        "category":6,
+        "manufacturer_id":8,
+        "name": "Xbox Series S 1TB (Carbon Black)",
+        "description": "Xbox Series S játékkonzol fekete színben 1TB SSD tárhellyel, 1db új Xbox Series kontroller fekete színben, High Speed HDMI-kábel, Tápkábel, Használati útmutató",
+        "price": 134990
+    },
+    {
+        "id":41,
+        "category":6,
+        "manufacturer_id":8,
+        "name": "Xbox Series S 512GB",
+        "description": "Xbox Series S játékkonzol fehér színben 512GB SSD tárhellyel, 1db új Xbox Series kontroller fehér színben, High Speed HDMI-kábel, Tápkábel, Használati útmutató",
+        "price": 119990
+    },
+    {
+        "id":42,
+        "category":6,
+        "manufacturer_id":8,
+        "name": "Xbox 360 E 500GB",
+        "description": "Xbox 360 E 500GB (használt)",
+        "price": 34999
+    },
+    {
+        "id":43,
+        "category":6,
+        "manufacturer_id":8,
+        "name": "Xbox 360 Slim 250GB",
+        "description": "Xbox 360 Slim 250GB (használt)",
+        "price": 29999
+    },
+    {
+        "id":44,
+        "category":6,
+        "manufacturer_id":9,
+        "name": "PlayStation 5 Digital Edition (Slim)",
+        "description": "PlayStation 5 Digital Edition játékkonzol 1TB tárhellyel, 1 db PlayStation 5 DualSense kontroller fekete-fehér színkombinációban, 2 db vízszintes állvány, HDMI kábel, Tápkábel, USB kábel, Használati útmutató, ASTRO's PLAYROOM (Előtelepítve)",
+        "price": 184990
+    },
+    {
+        "id":45,
+        "category":6,
+        "manufacturer_id":9,
+        "name": "PlayStation 5",
+        "description": "PlayStation 5 játékkonzol 825GB tárhellyel, 1 db PlayStation 5 DualSense kontroller fekete-fehér színkombinációban, Tartóállvány, HDMI kábel, Tápkábel, USB kábel, Használati útmutató, ASTRO's PLAYROOM (Előtelepítve)",
+        "price": 174990
     }
 ]
