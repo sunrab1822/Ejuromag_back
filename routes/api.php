@@ -32,6 +32,15 @@ Route::post('/login', [AuthController::class, 'Login']);
 Route::post('/reset-password-token', [AuthController::class, 'ResetPasswordToken']);
 Route::post('/reset-password', [AuthController::class, 'ResetPassword']);
 
+
+//orders
+
+//uj
+//torol
+//lekérdez
+// modosit
+
+
 // logged in
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/logout',[AuthController::class, 'Logout']);
