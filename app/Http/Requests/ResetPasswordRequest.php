@@ -22,7 +22,7 @@ class ResetPasswordRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'toke'=> "required|string",
+            'token'=> "required|string",
             'password'=>"required|string|min:8|max:255"
         ];
     }
