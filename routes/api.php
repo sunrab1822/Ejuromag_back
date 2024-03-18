@@ -23,7 +23,11 @@ use Illuminate\Support\Facades\Route;
 
 
 //product
-Route::get('/product/{id}', [ProductController::class, 'getAll']);
+Route::get('/products', [ProductController::class, 'getAll']);
+Route::get('/products/{id}', [ProductController::class, 'getProductByCategory']);
+Route::get('/product/{id}', [ProductController::class, 'getProductById']);
+
+
 
 
 // auth
@@ -44,5 +48,7 @@ Route::post('/reset-password', [AuthController::class, 'ResetPassword']);
 // logged in
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/logout',[AuthController::class, 'Logout']);
-    Route::get('/test', function () {return "teszt";});
+    Route::post('/createProduct', [ProductController::class, 'saveProduct']);
+    Route::put('/modifyProduct/{id}', [ProductController::class, 'updateProduct']);
+
 });
