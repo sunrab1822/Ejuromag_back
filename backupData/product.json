@@ -2,7 +2,7 @@
     {
         "id": 1,
         "category": 1,
-        "manufacturer_id": 10,",
+        "manufacturer_id": 10,
         "picture": "bgs.jedlik.eu/ejuromag/images/acer.jpg",
         "name": "Acer Aspire 3",
         "description": "Core i5, 512 GB NVMe SSD, 8192 (DDR4) MB, Intel Iris Xe",
