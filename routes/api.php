@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ProductController;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,9 +27,11 @@ use Illuminate\Support\Facades\Route;
 
 //product
 Route::get('/products', [ProductController::class, 'getAll']);
-Route::get('/products/{id}', [ProductController::class, 'getProductByCategory']);
+Route::get('/products/{id}', [ProductController::class, 'getProductsByCategory']);
 Route::get('/product/{id}', [ProductController::class, 'getProductById']);
 
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/manufacturers', [ManufacturerController::class, 'index']);
 
 
 

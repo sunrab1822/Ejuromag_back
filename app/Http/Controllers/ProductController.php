@@ -16,7 +16,7 @@ class ProductController extends Controller
         return response()->json(["error" => false, "data" => $products]);
     }
 
-    public function getProductByCategory($id)
+    public function getProductsByCategory($id)
     {
         $categorywithproducts = Category::with('product')->where('id', $id)->get();
         return response()->json(["error" => false, "data" => $categorywithproducts]);

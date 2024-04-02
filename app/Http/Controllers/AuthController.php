@@ -102,7 +102,7 @@ class AuthController extends Controller
         $tokenholder = PasswordResetToken::where('token',$request->token)->first();
 
         if (!$tokenholder){
-            return response()->json(["error" => true, "message" =>"Token not found"], 404);
+            return response()->json(["error" => true, "message" =>"Invalid token,"], 404);
         }
 
         $user = User::where('email', $tokenholder->email)->first();
