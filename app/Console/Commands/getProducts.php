@@ -38,8 +38,8 @@ class getProducts extends Command
                 'manufacturer_id'=> $product['manufacturer_id'],
                 'description' => $product['description'],
                 'name' => $product['name'],
-                'price' => $product['price']
-
+                'price' => $product['price'],
+                'picture' => $product['picture']
             ]);
         }
     }
