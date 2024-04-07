@@ -31,6 +31,15 @@ class ProductController extends Controller
         return response()->json(["error" => false, "data" => $product]);
     }
 
+    public function getProductsByname($name = "")
+    {
+        $products = Product::where('name', "like", "%$name%" )->get();
+        return response()->json(["error" => false, "data" => $products]);
+
+    }
+
+
+
     public function saveProduct(StoreProductRequest $req){
 
         $product = Product::create([

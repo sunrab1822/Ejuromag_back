@@ -4,6 +4,6 @@
 </head>
 <body>
     <p>{{ $text }}</p>
-    <p>http://127.0.0.1:5713/resetPassword/{{$resetLink}}</p>
+    <p>http://localhost:5173/resetPassword/{{$resetLink}}</p>
 </body>
 </html>

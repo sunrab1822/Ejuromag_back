@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ManufacturerController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -19,21 +20,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-
-
 //product
 Route::get('/products', [ProductController::class, 'getAll']);
 Route::get('/products/{id}', [ProductController::class, 'getProductsByCategory']);
 Route::get('/product/{id}', [ProductController::class, 'getProductById']);
+Route::get('/productbyName/{name?}', [ProductController::class, 'getProductsByname']);
+Route::get('/productwManuf/{id}', [ManufacturerController::class, 'ProductByManufacturer']);
+
 
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/manufacturers', [ManufacturerController::class, 'index']);
-
-
 
 // auth
 Route::post('/register', [AuthController::class, 'Register']);
@@ -41,19 +37,12 @@ Route::post('/login', [AuthController::class, 'Login']);
 Route::post('/reset-password-token', [AuthController::class, 'ResetPasswordToken']);
 Route::post('/reset-password', [AuthController::class, 'ResetPassword']);
 
-
-//orders
-
-//uj
-//torol
-//lekérdez
-// modosit
-
-
-// logged in
+// need logged in
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/logout',[AuthController::class, 'Logout']);
+    Route::post('/logout', [AuthController::class, 'Logout']);
     Route::post('/createProduct', [ProductController::class, 'saveProduct']);
     Route::put('/modifyProduct/{id}', [ProductController::class, 'updateProduct']);
 
+    //orders
+    Route::post('/create-order', [OrderController::class, 'saveOrder']);
 });

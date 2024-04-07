@@ -39,7 +39,7 @@ class getProducts extends Command
                 'description' => $product['description'],
                 'name' => $product['name'],
                 'price' => $product['price'],
-                'picture' => $product['picture']
+                'picture' => "https://" . $product['picture']
             ]);
         }
     }
