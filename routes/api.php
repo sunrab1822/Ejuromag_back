@@ -42,6 +42,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/logout', [AuthController::class, 'Logout']);
     Route::post('/createProduct', [ProductController::class, 'saveProduct']);
     Route::put('/modifyProduct/{id}', [ProductController::class, 'updateProduct']);
+    Route::get('/getOrder', [OrderController::class, 'showOrderByuser']);
 
     //orders
     Route::post('/create-order', [OrderController::class, 'saveOrder']);

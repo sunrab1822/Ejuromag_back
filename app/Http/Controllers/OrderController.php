@@ -13,8 +13,13 @@ class OrderController extends Controller
 
     public function getAll(){
         return response()->json(["error" => false, "data" => Order::all()]);
-
     }
+
+    public function showOrderByuser(){
+        $order = Order::with("products")->where("user_id", Auth::id())->get();
+        return response()->json(["error" => false, "data" => $order]);
+    }
+
 
     public function saveOrder(Request $req){
         $price = 0;
