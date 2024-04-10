@@ -33,8 +33,8 @@ class OrderController extends Controller
             if ($req->has('products')){
                 foreach ($req->products as $value) {
                     OrdersProducts::create([
-                        'orders_id' => $order->id,
-                        'products_id' => $value
+                        'order_id' => $order->id,
+                        'product_id' => $value
                     ]);
                     $price += $this->CalculatePrice($value);
                 }

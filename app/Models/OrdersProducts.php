@@ -10,7 +10,7 @@ class OrdersProducts extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['orders_id', 'products_id'];
+    protected $fillable = ['order_id', 'product_id'];
 
 
     /**
