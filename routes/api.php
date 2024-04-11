@@ -43,7 +43,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/createProduct', [ProductController::class, 'saveProduct']);
     Route::put('/modifyProduct/{id}', [ProductController::class, 'updateProduct']);
     Route::get('/getOrder', [OrderController::class, 'showOrderByuser']);
-
+    Route::patch('/updateUser', [AuthController::class, 'UpdateUser']);
     //orders
     Route::post('/create-order', [OrderController::class, 'saveOrder']);
 });
