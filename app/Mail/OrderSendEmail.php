@@ -9,14 +9,14 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ResetTokenEmail extends Mailable
+class OrderSendEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(protected string $text, private string $resetLink, private string $Nametext)
+    public function __construct(protected string $text, private string $orderlink, private string $Nametext)
     {
         //
     }
@@ -27,7 +27,7 @@ class ResetTokenEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Reset Password Email',
+            subject: 'Your order is ready',
         );
     }
 
@@ -37,11 +37,11 @@ class ResetTokenEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'restetpass',
+            view: 'orderpass',
             with:[
                 'Nametext' => $this->Nametext,
                 'text' => $this->text,
-                'resetLink' => $this->resetLink
+                'orderlink' => $this->orderLink
             ],
         );
     }
