@@ -5,8 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\OrdersProducts;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderSendEmail;
+use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 class OrderController extends Controller
 {
@@ -22,6 +29,8 @@ class OrderController extends Controller
 
 
     public function saveOrder(Request $req){
+        $user = User::where('email', $req->email)->first();
+
         $price = 0;
         if ($req->has('address')) {
             $order = Order::create([
@@ -41,6 +50,13 @@ class OrderController extends Controller
 
                 $order->price = $price;
                 $order->save();
+		
+		$Nametext = $user->name;
+                $text = 'Here is your order link.';
+                $orderLink =  '/profil/rendelesek';
+        
+                Mail::to($user->email)->send(new OrderSendEmail($text, $resetLink, $Nametext));
+
                 return response()->json(["error" => false, "data" => $order]);
             }
             else{
