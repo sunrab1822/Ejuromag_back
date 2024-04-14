@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/products', [ProductController::class, 'getAll']);
 Route::get('/products/{id}', [ProductController::class, 'getProductsByCategory']);
 Route::get('/product/{id}', [ProductController::class, 'getProductById']);
+Route::get('/productByPrice/{min}/{max}', [ProductController::class, 'searchByPrice']);
 Route::get('/productbyName/{name?}', [ProductController::class, 'getProductsByname']);
 Route::get('/productwManuf/{id}', [ManufacturerController::class, 'ProductByManufacturer']);
 
@@ -47,3 +48,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //orders
     Route::post('/create-order', [OrderController::class, 'saveOrder']);
 });
+
+

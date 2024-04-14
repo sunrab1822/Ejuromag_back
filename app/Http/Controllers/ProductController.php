@@ -77,5 +77,9 @@ class ProductController extends Controller
     }
 
 
+    public function searchByPrice($min,$max){
+        $product = Product::whereBetween("price", [$min, $max])->get();
+        return response()->json(["error" => false, "data" => $product]);
 
+    }
 }
