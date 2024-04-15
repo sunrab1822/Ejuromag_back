@@ -87,7 +87,7 @@ class AuthController extends Controller
             'email' => $user->email,
             'token' => Str::random(60)
         ]);
-	
+
 	$Nametext = $user->name;
         $text = 'Here is your password reset link.';
         $resetLink =  $resettoken->token;
@@ -116,6 +116,19 @@ class AuthController extends Controller
         return response()->json(["error" => false,'message' => 'password changed'], 200);
 
 
+    }
+
+    public function UpdateUser(Request $req)
+    {
+        $user = User::updateOrCreate([
+            "id" => Auth::id()
+        ], [
+            'name' => $req->name,
+            'email' => $req->email,
+        ]);
+
+        $user->save();
+        return response()->json(["error" => false, 'message' => 'user changed'], 200);
     }
 
 }
