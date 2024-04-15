@@ -50,12 +50,12 @@ class OrderController extends Controller
 
                 $order->price = $price;
                 $order->save();
-		
-		$Nametext = $user->name;
+
+		        $Nametext = $user->name;
                 $text = 'Here is your order link.';
                 $orderLink =  '/profil/rendelesek';
-        
-                Mail::to($user->email)->send(new OrderSendEmail($text, $resetLink, $Nametext));
+
+                Mail::to($user->email)->send(new OrderSendEmail($text, $orderLink, $Nametext));
 
                 return response()->json(["error" => false, "data" => $order]);
             }

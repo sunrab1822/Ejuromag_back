@@ -16,7 +16,7 @@ class OrderSendEmail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(protected string $text, private string $orderlink, private string $Nametext)
+    public function __construct(protected string $text, private string $orderLink, private string $Nametext)
     {
         //
     }
