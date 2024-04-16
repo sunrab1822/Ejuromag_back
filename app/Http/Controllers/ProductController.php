@@ -48,6 +48,7 @@ class ProductController extends Controller
             "name" => $req->name,
             "description" => $req->description,
             "price" => $req->price,
+            "picture" => $req->picture,
         ]);
 
         return response()->json(["error" => false, "data" => $product]);
@@ -71,6 +72,7 @@ class ProductController extends Controller
             "name" => $req->name,
             "description" => $req->description,
             "price" => $req->price,
+            "picture" => $req->picture,
         ]);
 
         return response()->json(["error" => false, "id" => $product]);
