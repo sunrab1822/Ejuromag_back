@@ -6,6 +6,6 @@
 
     <p>Dear {{ $Nametext }}</p>
     <p>{{ $text }}</p>
-    <p>http://localhost:5173/resetPassword/{{$resetLink}}</p>
+    <p>https://bgs.jedlik.eu/ejuromag/resetPassword/{{$resetLink}}</p>
 </body>
 </html>
